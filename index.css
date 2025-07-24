@@ -62,6 +62,15 @@ main section{
     font-size: 3em;
     margin-bottom: -0.3em;
 }
+.thumbnail{
+    width: 100%;
+    aspect-ratio: 16 / 9;   /* Einheitliches Bildformat */
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+    display: block;
+}
+
 #welcome-p{
     font-size: 1em;
     color: #ff5e00;
@@ -69,25 +78,23 @@ main section{
     font-style: italic;
 }
 
-
 #projects-section{
     background-color: #121c27;
 }
 #tile-container{
-    height: var(--section-height);
-    display:grid;
-    place-content: center;
-    grid-template-columns: repeat(2,1fr);
-    /* 2 columns */
-    grid-template-rows: repeat(2, 1fr);
-    /* 2 rows */
-    gap: 2em 2em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
     padding: 2em 15%;
+    /* place-content: center;  <-- Entfernen! */
+    /*height: var(--section-height);*/
 }
 
 .project-tile{
-    background-color: #24364b;
-    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 a{
@@ -113,7 +120,7 @@ footer p{
     #plan-container {
         flex-direction: column;
     }
-    #feature-container {
+    #tile-container{
         display: flex;
         flex-direction: column;
         justify-content: center;
