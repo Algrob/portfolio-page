@@ -1,0 +1,53 @@
+<!DOCTPYE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="./1survey_cert.css">
+  </head>
+  <body>
+    <h1 id="title">Dog Fanclub survey</h1>
+    <p class="motto">Dogs are the best!</p>
+    <p id="description">Help us grow the Dog Fanclub by filling out our survey.</p>
+    <form id="survey-form">
+        <fieldset>
+            <label for="name" id="name-label">Enter Dogs Your Name: <input id="name" name="name" type="text" required placeholder="e.g. Kenzo"/></label>
+            <label for="email" id="email-label">Enter Your Email<input id="email" name="emaiL" type="email" required placeholder="e.g. Kenzo@email.com"/></label>
+            <label for="number" id="number-label">How old is your Dog?<input id="number" name="number" type="number" min="0" max="99" placeholder="In human years"/></label>
+        </fieldset>
+        <fieldset>
+<!--Dropdown Menu-->
+            <label for="dropdown" id="dropdown-label">Why did you become a dog owner?
+                <select id="dropdown">
+                    <option value="0">(select one) </option>
+                    <option value="1">I could never finish a pizza on my own</option>
+                    <option value="2">Scaring cats out of my garden was too much work</option>
+                    <option value="3">To blame my farts on the dog</option>
+                    <option value="4">I don't trust squirrels</option>
+                    <option value="5">Other</option>
+                </select>
+            </label>
+<!--Radio Buttons-->
+            <label for="toy" class="firstnewlabel">What is your dogs favorite toy?
+              <label for="squeaky"><input id="squeaky" type="radio" name="toy" class="inline" value="11"/> Squeaky Toy</label>
+              <label for="ball"><input id="ball" type="radio" name="toy" class="inline" value="12"/> Stick</label>  
+              <label for="stick"><input id="stick" type="radio" name="toy" class="inline" value="13"/> Ball</label>  
+              <label for="other"><input id="other" type="radio" name="toy" class="inline" value="14"/> Other</label>
+            </label>
+<!--Checkbox Buttons-->
+              <label for="food" class="firstnewlabel">What kind of foods does your dog eat?
+              <label for="dogfood"><input id="dogfood" type="checkbox" name="food" class="inline" value="21"/>Dog Food</label>    
+              <label for="cheese"><input id="cheese" type="checkbox" name="food" class="inline" value="22"/>Cheese</label>    
+              <label for="chinesef"><input id="chinesef" type="checkbox" name="food" class="inline" value="23"/>Chinese Food</label>      
+              <label for="vegetables"><input id="vegetables" type="checkbox" name="food" class="inline" value="24"/>Vegetables</label>    
+              <label for="notdogfood"><input id="notdogfood" type="checkbox" name="food" class="inline" value="25"/>Everything except dog food</label>        
+            </label>
+ <!--Textbox-->
+            <label for="fact" class="firstnewlabel">Tell us a random fact about your dog:
+              <textarea id="fact" name="fact" rows="3" cols="30" placeholder="My dog grunts when he is excited..."></textarea>
+            </label>
+          </fieldset>
+<!--Submit Button-->
+          <input type="submit" value="submit" id="submit"/>
+    </form>
+  </body>
+</html> 

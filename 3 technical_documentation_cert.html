@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="technical documentation" />
+    <title>Technical Documentation Page HTML Markup (cert)</title>
+    <link rel="stylesheet" href="./3tech_doc.css" />
+</head>
+
+<body>
+    <nav id="navbar">
+        <header>
+            HTML Markup Basics
+        </header>
+        <a class="nav-link" href="#Introduction">Introduction</a>
+        <a class="nav-link" href="#Elements">Elements</a>
+        <a class="nav-link" href="#Element_attributes">Element attributes</a>
+        <a class="nav-link" href="#Character_and_entity_references">Character and entity references</a>
+        <a class="nav-link" href="#Data_types">Data types</a>
+        <a class="nav-link" href="#Document_type_declaration">Document type declaration</a>
+        <a class="nav-link" href="#Reference">Reference</a>
+    </nav>
+    
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <p>
+                HTML markup consists of several key components, including those called tags (and their attributes), character-based data types, character references and entity references. HTML tags most commonly come in pairs like <code>&lt;h1></code> and <code>&lt;/h1></code>, although some represent empty elements and so are unpaired, for example <code>&lt;img></code>. The first tag in such a pair is the start tag, and the second is the end tag (they are also called opening tags and closing tags).
+            </p>
+            <p>
+                Another important component is the HTML document type declaration, which triggers standards moderendering.
+            </p>
+
+        </section>
+        <section class="main-section" id="Elements">
+            <header>Elements</header>
+            <p> 
+                HTML documents imply a structure of nested HTML elements. These are indicated in the document by HTML tags, enclosed in angle brackets thus: <code>&lt;p></code>.
+            </p>
+            <p>
+                In the simple, general case, the extent of an element is indicated by a pair of tags: a "start tag" <code>&lt;p></code> and "end tag" <code>&lt;p></code>. The text content of the element, if any, is placed between these tags.
+            </p>
+            <p>
+                Tags may also enclose further tag markup between the start and end, including a mixture of tags and text. This indicates further (nested) elements, as children of the parent element.
+            </p>
+            <p>
+                The start tag may also include the element's attributes within the tag. These indicate other information, such as identifiers for sections within the document, identifiers used to bind style information to the presentation of the document, and for some tags such as the <code>&lt;img></code> used to embed images, the reference to the image resource in the format like this: <code>&lt;img src="example.com/example.jpg"></code>
+            </p>
+            <p>
+                Some elements, such as the line break <code>&lt;br /></code> do not permit any embedded content, either text or further tags. These require only a single empty tag (akin to a start tag) and do not use an end tag.
+            </p>
+            <p>      
+                There are several types of markup elements used in HTML:
+            </p>
+            <ul>
+                <li>
+                    <span class="bold">Structural markup indicates the purpose of text.</span> For example, <code>&lt;h2>Golf&lt;/h2></code> establishes "Golf" as a second-level heading. Structural markup does not denote any specific rendering, but most web browsers have default styles for element formatting. Content may be further styled using Cascading Style Sheets (CSS).
+                </li>
+                <li>
+                    <span class="bold">Presentational markup indicates the appearance of the text, regardless of its purpose.</span> For example, <code>&lt;b>boldface&lt;/b></code> indicates that visual output devices should render "boldface" in bold text, but gives a little indication what devices that are unable to do this (such as aural devices that read the text aloud) should do. Most presentational markup elements have become deprecated under the HTML 4.0 specification in favor of using CSS for
+                    styling.
+                </li>
+                <li>
+                    <span class="bold">Hypertext markup makes parts of a document into links to other documents.</span> An anchor element creates a hyperlink in the document and its href attribute sets the link's target URL. For example, the HTML markup <code>&lt;a  href="https://en.wikipedia.org/"> Wikipedia &lt;/a></code>, will render the word
+                    "Wikipedia" as a hyperlink. To render an image as a hyperlink, an img element is inserted as content into the a element.
+                </li>
+            </ul>
+
+        </section>
+        <section class="main-section" id="Element_attributes">
+            <header>Element attributes</header>
+            <p> 
+                Most of the attributes of an element are name-value pairs, separated by = and written within the start tag of an element after the element's name. The value may be enclosed in single or double quotes, although values consisting of certain characters can be left unquoted in HTML (but not XHTML). Leaving attribute values unquoted is considered unsafe. In contrast with name-value pair attributes, there are some attributes that affect the element simply by their presence in the start tag of the element, like the ismap attribute for the img element.
+            </p>
+            <p>
+                There are several common attributes that may appear in many elements :
+            </p>
+            <ul>
+                <li>
+                    The <code>id</code> attribute provides a document-wide unique identifier for an element. This is used to identify the element so that stylesheets can alter its presentational properties, and scripts may alter, animate or delete its contents or presentation. Appended to the URL of the page, it provides a globally unique identifier for the element, typically a sub-section of the page. For example, the ID "Attributes" in https://en.wikipedia.org/wiki/HTML#Attributes.</li>
+                <li>
+                    The <code>class</code> attribute provides a way of classifying similar elements. This can be used for semantic or presentation purposes. Multiple class values may be specified; for example <code>&lt;class="notation important">;</code> puts the element into both the notation and the important classes.
+                </li>
+                <li> 
+                    An author may use the <code>style</code> attribute to assign presentational properties to a particular element. It is considered better practice to use an element's id or class attributes to select the element from within a stylesheet, though sometimes this can be too cumbersome for a simple, specific, or ad hoc styling.
+                </li>
+                <li>
+                    The <code>title</code> attribute is used to attach a subtextual explanation to an element. In most browsers this attribute is displayed as a tooltip.
+                </li> 
+                <li> The <code>lang</code> attribute identifies the natural language of the element's contents, which may be different from that of the rest of the document. For example, in an English-language document: 
+                </li>
+            </ul>
+        </section>
+        <section class="main-section" id="Character_and_entity_references">
+            <header>Character and entity references</header>
+            <p>
+                As of version 4.0, HTML defines a set of 252 character entity references and a set of 1,114,050 numeric character references, both of which allow individual characters to be written via simple markup, rather than literally. A literal character and its markup counterpart are considered equivalent and are rendered identically.
+            </p>
+            <p>
+                The ability to "escape" characters in this way allows for the characters <code>&lt</code> and <code>&</code> (when written as &lt; and &amp;, respectively) to be interpreted as character data, rather than markup. For example, a literal <code><</code> normally indicates the start of a tag, and <code>&</code> normally indicates the start of a character entity reference or numeric character reference; writing it as <code>&amp;amp;</code> or <code>&amp;#x26;</code> or <code>&amp;#38;</code> allows <code>&amp;</code> to be included in the content of an element or in the value of an attribute.
+            </p>
+            <p>
+                Escaping also allows for characters that are not easily typed, or that are not available in the document's character encoding, to be represented within the element and attribute content.
+            </p>
+        </section>
+
+        </section>
+        <section class="main-section" id="Data_types">
+            <header>Data types</header>
+            <p> 
+                HTML defines several data types for element content, such as script data and stylesheet data, and a plethora of types for attribute values, including IDs, names, URIs, numbers, units of length, languages, media descriptors, colors, character encodings, dates and times, and so on. All of these data types are specializations of character data.
+            </p>
+
+        </section>
+        <section class="main-section" id="Document_type_declaration">
+            <header>Document type declaration</header>
+            <p> HTML documents are required to start with a Document Type Declaration (informally, a "doctype"). In
+                browsers, the doctype helps to define the rendering mode—particularly whether to use quirks mode.
+            </p>
+            <p>The original purpose of the doctype was to enable the parsing and validation of HTML documents by SGML tools based on the Document Type Definition (DTD). The DTD to which the DOCTYPE refers contains a machine-readable grammar specifying the permitted and prohibited content for a document conforming to such a DTD. Browsers, on the other hand, do not implement HTML as an application of SGML and as consequence do not read the DTD.
+            </p>
+            <p>HTML5 does not define a DTD; therefore, in HTML5 the doctype declaration is simpler and shorter</p>
+        </section>
+        <section class="main-section" id="Reference">
+            <header>Reference</header>
+            <p>
+                This documentation has been taken from Wikipedia. To learn more head to the <a id="wikilink" href="https://en.wikipedia.org/wiki/HTML#Markup" target="_blank" title="Markup Section in the Wikipedia article on HTML">HTML Wikipedia article</a>.
+            </p>
+        </section>
+    </main>
+</body>
+
+</html>
+
+<!-- 
+    The first element within each .main-section should be a header element, which contains 
+    text that describes the topic of that section.
+
+    Each section element with the class of main-section should also have an id that corresponds 
+    with the text of each header contained within it. Any spaces should be replaced with 
+    underscores (e.g. The section that contains the header "JavaScript and Java" should have a 
+    corresponding id="JavaScript_and_Java")
+
+    The .main-section elements should contain at least ten p elements total (not each)
+
+    The .main-section elements should contain at least five code elements total (not each)
+
+    The .main-section elements should contain at least five li items total (not each)
+
+    You can see a nav element with a corresponding id="navbar"
+
+    The navbar element should contain one header element which contains text that describes the 
+    topic of the technical documentation
+
+    Additionally, the navbar should contain link (a) elements with the class of nav-link. 
+    There should be one for every element with the class main-section
+
+    The header element in the #navbar must come before any link (a) elements in the navbar
+
+    Each element with the class of nav-link should contain text that corresponds to the 
+    header text within each section (e.g. if you have a "Hello world" section/header, your 
+    navbar should have an element which contains the text "Hello world")
+
+    When you click on a navbar element, the page should navigate to the corresponding section 
+    of the #main-doc element (e.g. If you click on a .nav-link element that contains the text 
+    "Hello world", the page navigates to a section element with that id, and contains the 
+    corresponding header)
+
+    On regular sized devices (laptops, desktops), the element with id="navbar" should 
+    be shown on the left side of the screen and should always be visible to the user
+
+    Your technical documentation should use at least one media query
+-->

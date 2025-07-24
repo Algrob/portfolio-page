@@ -1,0 +1,80 @@
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  background-image: url(https://img.freepik.com/free-vector/cute-pattern-with-dog-faces-bones_1191-1204.jpg?w=740&t=st=1697024568~exp=1697025168~hmac=701ace1919c766b9e3c1ba791184ae195e48d16bb2cb29e714096d96fd3efea4);
+  background-color: #fff7f5;
+  color: Black;
+  font-family: Tahoma;
+  font-size: 18px;
+}
+h1, p {
+margin: 1em auto;
+text-align: center;
+margin-bottom: 0;
+}
+h1{
+font-family:Impact;
+font-size: 50px;
+color:#3d0202;
+}
+.motto{
+margin-bottom:2em;
+font-style: italic;
+}
+form {
+width: 60vw;
+max-width: 500px;
+min-width: 300px;
+margin: 0 auto;
+padding-bottom: 2em;
+}
+
+fieldset {
+border: none;
+padding: 2rem 0;
+border-bottom: 3px solid #3d0202;
+}
+
+fieldset:last-of-type {
+border-bottom: none;
+}
+
+label {
+display: block;
+margin: 0.5rem 0;
+}
+.firstnewlabel{
+margin-top: 1.5em;
+}
+
+input,
+textarea,
+select {
+margin: 10px 0 0 0;
+width: 100%;
+min-height: 2em;
+}
+
+input, textarea {
+background-color: #d9d2d0;
+border: 1px solid #d9d2d0;
+color: black;
+}
+
+.inline {
+width: unset;
+margin: 0 0.5em 0 0;
+vertical-align: middle;
+}
+
+input[type="submit"] {
+display: block;
+width: 60%;
+margin: 1em auto;
+height: 2em;
+font-size: 1.1rem;
+background-color: #d6834f;
+border-color: black;
+min-width: 300px;
+}

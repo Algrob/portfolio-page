@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="device-width=width, initial-scale=1.0">
+    <meta name="description" content="Product Landing Page">
+    <link rel="stylesheet" href="./4product_landing.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
+    <link href='https://fonts.googleapis.com/css?family=Fira Sans Condensed' rel='stylesheet'>
+    <title>Lasagne subscription</title>
+</head>
+
+<body>
+    <header id="header">
+        <img id="header-img" src="https://algrob.github.io/fCC_data/lasagne_logo.png" alt="Lasagne Logo">
+        <nav id="nav-bar">
+            <a class="nav-link" href="#product-features">Features</a>
+            <a class="nav-link" href="#cooking-video">How it's made</a>
+            <a class="nav-link" href="#product-plans">Subscription plans</a>
+        </nav>
+    </header>
+    <main>
+        <!--Email Form-->
+        <section id="newsletter">
+            <h2>Handcrafted, home-made masterpieces</h2>
+            <form id="form" method="post" action="https://www.freecodecamp.com/email-submit">
+                <input id="email" type="email" name="email" required placeholder="Enter your email adress">
+                <input type="submit" id="submit" class="button emailbutton" value="Get our Nonna Newsletter" />
+            </form>
+        </section>
+        <!--Icons + product description-->
+        <section id="product-features">
+            <div id="feature-container">
+                <div class="icon"><i class="fas fa-seedling" style="color: #008C45;"></i></div>
+                <div class="icon-text">
+                    <h2>Vegetarian and vegan options</h2>
+                    <p>Modern interpretations of the lasagne dish offer a wide variety of vegetarian and vegan options.
+                    </p>
+                </div>
+                <div class="icon"> <i class="fas fa-archway" style="color: #D0D0D0;"></i></div>
+                <div class="icon-text">
+                    <h2>Authentic Italian cooking</h2>
+                    <p>We guarantee every lasagna is handmade by an Italian grandma.</p>
+                </div>
+                <div class="icon"><i class="fas fa-horse" style="color: #CD212A;"></i></i></div>
+                <div class="icon-text">
+                    <h2>Quality meats</h2>
+                    <p>Only premium quality meat, from animals reared in freedom, is fit for our lasagne.</p>
+                </div>
+            </div>
+        </section>
+        <!--Video-->
+        <section id="cooking-video">
+            <h3>Learn how our lasagne are made:</h3>
+            <div id="video-container">
+                <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/4UTrEpVKhKM?si=N2F63PukFRzwSWhW"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+        <!--Produkt plans-->
+        <section id="product-plans">
+            <div id="plan-container">
+                <div class="plan" id="plan-a">
+                    <div class="plan-heading">Monthly</div>
+                    <h3 class="plan-price">$12 per Lasagna</h3>
+                    <ul>
+                        <li>Choose a different lasagna every month.</li>
+                        <li>Delivered on a date of your choosing.</li>
+                        <li>Guarenteed to be deliveered while still hot.</li>
+                    </ul>
+                    <button class="button">Select</button>
+                </div>
+                <div class="plan" id="plan-b">
+                    <div class="plan-heading">Weekly</div>
+                    <h3 class="plan-price">$10.20 per Lasagna</h3>
+                    <ul>
+                        <li>Save 15% with every lasagna.</li>
+                        <li>Get access to our featured lasagne recipes.</li>
+                        <li>Select any day of the week for your lasagna delivery.</li>
+                    </ul>
+                    <button class="button">Select</button>
+                </div>
+                <div class="plan" id="plan-c">
+                    <div class="plan-heading">Daily</div>
+                    <h3 class="plan-price">$8 per Lasagna</h3>
+                    <ul>
+                        <li>You have your own designated Italian grandma.</li>
+                        <li>If you ask nicely she might cook something other than lasagne.</li>
+                        <li>You have to call your new grandma on catholic holidays.</li>
+                    </ul>
+                    <button class="button">Select</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <ul>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <p>No Copyright 2023, HAG</p>
+    </footer>
+</body>
+
+</html>
+
+<!-- https://www.youtube.com/watch?v=94d7ZXySplo alex lasagne video -->

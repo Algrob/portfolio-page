@@ -1,0 +1,188 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --header-height: max(75px, 10vh);
+    --logo-border-radius: calc(var(--header-height) / 2.8);
+  }
+
+@media (prefers-reduced-motion: no-preference) {
+    * {
+        scroll-behavior: smooth;
+    }
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    background-color: #F4F9FF;
+    margin: 0;
+    text-align: center;
+    padding: 0 5vw;
+}
+
+#header-img {
+    height: var( --header-height);
+    max-width: 50%;
+    border-radius: var(--logo-border-radius);
+}
+
+header {
+    background-color: #e5e5e5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var( --header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px white;
+    padding: 0 5vw;
+}
+header a{
+    padding: 0 10px;
+}
+
+main {
+    margin-top: var(--header-height);
+}
+main section{
+    scroll-margin-top: var(--header-height);
+}
+
+#form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#feature-container {
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(2, max-content);
+    /* 2 columns */
+    grid-template-rows: repeat(3, 1fr);
+    /* 3 rows */
+    gap: 10px 20px;
+}
+
+.icon-text{
+    text-align: left;
+    margin: 0;
+}
+.icon{
+    padding-top: 30px;
+    font-size: 3em;
+}
+
+#plan-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.plan {
+    width: 300px;
+    margin: 10px;
+    border: solid 1px black;
+    height: 400px;
+}
+
+#product-plans ul {
+    list-style: none;
+    padding: 10px;
+    height: 50%;
+}
+
+#product-plans ul li {
+    padding: 10px 0;
+}
+
+.plan-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    width: 100%;
+    font-weight: bold;
+    height: 1.5em;
+    margin: 0;
+}
+
+#plan-a .plan-heading {
+    background-color: #008C45;
+}
+
+#plan-c .plan-heading {
+    background-color: #DDDDDD;
+}
+
+#plan-b .plan-heading {
+    background-color: #CD212A;
+}
+
+.button {
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 20px 20px 20px 20px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+footer{
+    background-color: #e5e5e5;
+    text-align: right;
+}
+footer li{
+    display: inline;
+    margin: 0 10px;
+}
+footer p{
+    font-size: 0.8em;
+    margin-right: 10px;
+    color: #444; 
+}
+
+@media (max-width: 900px){
+    #plan-container {
+        flex-direction: column;
+    }
+    #feature-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .icon-text{
+        text-align: center;
+    }
+}
+
+@media (max-width: 650px){
+    nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+ @media (max-width: 450px){
+    header{
+        height: 120px;
+    }
+    nav a{
+        margin-top: 4px;
+    }
+    main{
+        margin-top: 120px;
+    }
+    main section{
+        scroll-margin-top: 120px;
+    }
+ }

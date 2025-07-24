@@ -1,0 +1,83 @@
+
+body{
+  color:#e4e4f5;
+  background-color: #cd262d;
+  text-align: center;
+  font-family:Tahoma, sans-serif;
+}
+main{
+  width: 80vw;
+  height: 90vh;
+  margin: auto;
+}
+.image-container {
+  width: 80vw;
+  max-height: 80vh;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#img-caption {
+  /* Optional: Stilisiere die Bildunterschrift nach Bedarf */
+  text-align: center;
+  margin-top: 10px;
+  color:white;
+  width: 75vw;
+}
+
+img{
+  max-width: 100%;
+  display:block;
+  height: auto; 
+  object-fit: cover;
+  object-position: center top;
+}
+
+#img-div {
+  background-color:#d9667f;
+  padding: 10px 5px 30px 5px;
+  border-radius: 15px;
+
+  display:flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap:wrap;
+  
+  width: 80vw;
+  height: 90vh;
+  margin: auto;
+}
+
+.medals-column {
+  display: inline-block; /* Ändert die Anzeige auf 'inline-block' */
+  width: 30%;
+  text-align: left; /* Setzt den Text innerhalb der Spalten auf linksbündig */
+  vertical-align: top; /* Sorgt dafür, dass die Spalten am oberen Rand ausgerichtet sind */
+}
+.medals-row {
+  text-align: center; /* Zentriert den Text in den Spalten */
+}
+/* Clear floats after the columns */
+.medals-row:after {
+  margin:auto;
+  content: "";
+  display: table;
+  clear: both;
+}
+.medal{
+  color: black;
+  border-radius: 50%;
+  font-weight: bold;
+  line-height: 25px;
+  padding: 0 4px;
+}
+.gold{
+  background-color: gold;
+}
+.silver{
+  background-color: silver;
+}
+
+#tribute-info{
+  margin: auto;
+}
