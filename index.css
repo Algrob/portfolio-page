@@ -71,14 +71,18 @@ main section{
     display: block;
 }
 
-#welcome-p{
+.info-p{
     font-size: 1em;
     color: #ff5e00;
     font-family:'Courier New', Courier, monospace;
     font-style: italic;
 }
 
-#projects-section{
+#profile-link{
+    margin-top: 1em;
+}
+
+#projects{
     background-color: #121c27;
 }
 #tile-container{
